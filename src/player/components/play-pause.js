@@ -5,7 +5,7 @@ import Pause from '../../icons/components/pause'
 
 function PlayPause(props) {
   return (
-    <div>
+    <div className="PlayPause">
       {
         props.pause ?
           <button
