@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+import { createStore } from 'redux';
 
 const $form = document.getElementById('form');
 $form.addEventListener('submit', handleSubmit);
@@ -10,28 +10,35 @@ function handleSubmit(event) {
   console.log(title);
   store.dispatch({
     type: 'ADD_SONG',
-    payloud: {
-      title
+    payload: {
+      title,
     }
   })
 }
-
 const initialState = [
   {
-    "title": "Despacito"
+    "title": "Despacito",
   },
   {
-    "title": "One more time"
+    "title": "One more time",
   },
   {
-    "title": "Hechame la culpa"
+    "title": "Echame la culpa",
   }
 ]
 
 
+const reducer = function(state, action) {
+  switch (action.type) {
+    case 'ADD_SONG':
+      return [...state, action.payload]
+    default:
+      return state
+  }
+}
 
 const store = createStore(
-  (state) => state,
+  reducer,
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 )
@@ -44,4 +51,4 @@ playlist.forEach((item) => {
   $container.appendChild(template);
 })
 
-console.log(store.getState());
+console.log(store.getState())
