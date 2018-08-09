@@ -30,6 +30,6 @@ const homeContainer = document.getElementById('home-container')
 // Los Providers Heredan cosas a los componentes hijos
 render(
   <Provider store={store}>
-    {/* <Home /> */}
+    <Home />
   </Provider>
   , homeContainer);
