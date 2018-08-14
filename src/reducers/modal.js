@@ -1,9 +1,9 @@
-// import data from '../schemas/index'
+import { fromJS } from 'immutable'
 
-const initialState = {
+const initialState = fromJS({
   visibility: false,
   mediaId: null
-}
+})
 
 function modal(state = initialState, action) {
   switch (action.type) {
