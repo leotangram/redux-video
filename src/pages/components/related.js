@@ -1,6 +1,6 @@
-import React from 'react'
-import logo from '../../../images/logo.png'
-import './related.css'
+import React from 'react';
+import logo from '../../../images/logo.png';
+import './related.css';
 
 function Related(props) {
   return (
@@ -10,4 +10,4 @@ function Related(props) {
   )
 }
 
-export default Related
+export default Related;

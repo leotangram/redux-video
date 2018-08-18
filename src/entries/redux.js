@@ -62,3 +62,4 @@ function handleChange() {
 store.subscribe(handleChange)
 
 // console.log(store.getState())
+

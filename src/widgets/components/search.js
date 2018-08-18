@@ -1,9 +1,8 @@
-import React from 'react'
-import './search.css'
-
+import React from 'react';
+import './search.css';
 // function Search(props) {
 //   return (
-//     <form action=""></form>   
+//     <form action=""></form>
 //   )
 // }
 
@@ -13,10 +12,10 @@ const Search = (props) => (
     onSubmit={props.handleSubmit}
   >
     <input
-    ref={props.setRef}
-      className="Search-input"
-      placeholder="Busca tu video favorito"
+      ref={props.setRef}
       type="text"
+      placeholder="Busca tu video favorito"
+      className="Search-input"
       name="search"
       onChange={props.handleChange}
       value={props.value}

@@ -1,5 +1,7 @@
-import React from 'react'
-import './title.css'
+import React from 'react';
+
+import './title.css';
+
 
 function Title(props) {
   return (
@@ -9,4 +11,4 @@ function Title(props) {
   )
 }
 
-export default Title
+export default Title;

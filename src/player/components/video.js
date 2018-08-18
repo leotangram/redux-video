@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import './video.css'
+import React, { Component } from 'react';
+import './video.css';
 
 class Video extends Component {
   togglePlay() {
@@ -11,19 +11,20 @@ class Video extends Component {
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.pause !== this.props.pause) {
-      this.togglePlay()
+      this.togglePlay();
     }
   }
   setRef = element => {
-    this.video = element
+    this.video = element;
   }
   render() {
     const {
       handleLoadedMetadata,
       handleTimeUpdate,
       handleSeeking,
-      handleSeeked
-    } = this.props
+      handleSeeked,
+    } = this.props;
+
     return (
       <div className="Video">
         <video
@@ -40,4 +41,4 @@ class Video extends Component {
   }
 }
 
-export default Video
+export default Video;

@@ -1,7 +1,7 @@
-import React from 'react'
-import './play-pause.css'
-import Play from '../../icons/components/play'
-import Pause from '../../icons/components/pause'
+import React from 'react';
+import './play-pause.css';
+import Play from '../../icons/components/play';
+import Pause from '../../icons/components/pause';
 
 function PlayPause(props) {
   return (
@@ -14,11 +14,11 @@ function PlayPause(props) {
             <Play size={25} color="white" />
           </button>
         :
-          <button
-            onClick={props.handleClick}
-          >
-            <Pause size={25} color="white" />
-          </button>
+        <button
+          onClick={props.handleClick}
+        >
+          <Pause size={25} color="white" />
+        </button>
       }
     </div>
   )

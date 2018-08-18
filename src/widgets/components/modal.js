@@ -1,5 +1,5 @@
-import React from 'react'
-import './modal.css'
+import React from 'react';
+import './modal.css';
 
 function Modal(props) {
   return (
@@ -13,4 +13,4 @@ function Modal(props) {
   )
 }
 
-export default Modal
+export default Modal;
