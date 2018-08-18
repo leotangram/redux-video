@@ -4,28 +4,13 @@ import { fromJS } from 'immutable'
 const initialState = fromJS({
   entities: schema.entities,
   categories: schema.result.categories,
-  search: []
+  search: '',
 })
 
 function data(state = initialState, action) {
   switch (action.type) {
     case'SEARCH_VIDEO': {
-      let results = []
-      if (action.payload.query) {
-        state.data.categories.map( category => {
-          results = results.concat(category.playlist)
-        })
-        results = results.filter( item => {
-          const author = item.author.toLowerCase()
-          const query = action.payload.query.toLowerCase()
-          return author.includes(query)
-        })
-      }
-
-      return {
-        ...state,
-        search: results
-      }
+      return state.set('search', action.payload.query)
     }
     default:
       return state
